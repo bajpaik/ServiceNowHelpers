@@ -1,0 +1,142 @@
+https://sc.service-now.com/scripts/doctype/js_includes_doctype.jsx?v=08-15-2018_0923&lp=Mon_Oct_22_06_04_34_PDT_2018&c=24_364
+
+
+/*! RESOURCE: /scripts/consts/GlideEvent.js */
+var GlideEvent = {
+WINDOW_CLICKED:					'glide:window_clicked',
+WINDOW_BLURRED:					'glide:window_blurred',
+WINDOW_FOCUSED:					'glide:window_focused',
+IMAGE_PICKED:					'glide:image_picked',
+NAV_MANAGER_LOADED:				'glide:nav_manager_loaded',
+NAV_FORM_DIRTY_CANCEL_STAY:		'glide:nav_form_dirty_cancel_stay',
+NAV_SYNC_LIST_WITH_FORM:		'glide:nav_sync_list_with_form',
+NAV_LOAD_FORM_FROM_LIST:		'glide:nav_load_form_from_list',
+NAV_SAVE_PREFERENCES:			'glide:nav_save_preferences',
+NAV_UPDATE_EDGE_BUTTON_STATES:	'glide:nav_update_edge_button_states',
+NAV_OPEN_URL:					'glide:nav_open_url',
+NAV_ADD_BOOKMARK:				'glide:nav_add_bookmark',
+NAV_REMOVE_BOOKMARK:			'glide:nav_remove_bookmark',
+NAV_UPDATE_BOOKMARK:			'glide:nav_update_bookmark',
+NAV_DRAGGING_BOOKMARK_START:	'glide:nav_dragging_bookmark_start',
+NAV_DRAGGING_BOOKMARK_STOP:		'glide:nav_dragging_bookmark_stop',
+NAV_HIDE_ALL_TOOLTIPS:			'glide:nav_hide_all_tooltips',
+NAV_QUEUE_BOOKMARK_OPEN_FLYOUT:	'glide:nav_queue_bookmark_open_flyout',
+NAV_OPEN_BOOKMARK:              'glide:nav_open_bookmark',
+NAV_BOOKMARK_ADDED:				'glide:nav_bookmark_added',
+NAV_BOOKMARK_REMOVED:			'glide:nav_bookmark_removed',
+NAV_EAST_PANE_RESIZED:			'glide:nav_east_pane_resized',
+NAV_ADD_FLYOUT:					'glide:nav_add_flyout',
+NAV_REMOVE_FLYOUT:				'glide:nav_remove_flyout',
+NAV_TOGGLE_FLYOUT:				'glide:nav_toggle_flyout',
+NAV_HIDE_FLYOUTS:				'glide:nav_hide_flyouts',
+NAV_PANE_CLICKED:				'glide:nav_window_clicked'
+};
+
+
+	1)  gs.info(SNC.UpdateSetAccessUtil.checkDelegatedDeveloperAccessToHierarchy(gs.getUserID()))
+
+	2) var basicAuth = "Basic " + (new Packages.javax.xml.bind.DatatypeConverter.printBase64Binary(userpass.getBytes()) + '');
+
+ 3)     var userpass = new java.lang.String(this.probeParameters.username + ":" + this.probeParameters.password);
+
+	4) new Packages.java.net.URL(url).openConnection();
+ 
+
+	5) var handler = new GlideEventHandler("onChangeShowTFSSearch", onChangeShowTFSSearch, "${ref}");
+	g_event_handlers.push(handler);
+	
+	6) Gs.action.getGlideURI
+
+  7)     GlideUI.get().addOutputMessage(alertMsg);
+
+	8) gs.flushAccessMessages()
+	9) gs.getAccessMessages()
+	10) var assertTypeOnChangeEvent = new GlideEventHandler('onChange_' + assertTypeId, checkAssert, assertTypeId);
+	--> g_event_handlers.push(assertTypeOnChangeEvent);
+	11)  var label_list = GlideLabelUtil.getDisplayLabelsForUser();
+	12) GlideLabelUtil.getRecentDisplayLabelsForUser(9)
+	13) var plugin_enabled = GlidePluginManager.isActive('com.snc.documentviewer');
+	14) <script language="javascript">
+				g_application_picker = new ApplicationPicker("application_picker");
+				g_application_picker.on("afterload", function () {
+					$("application_drill").on("click", function () {
+						var select = $("application_picker_select");
+						var chosen = select.options[select.selectedIndex].value;
+	
+						CustomEvent.fire(GlideEvent.NAV_OPEN_URL, {
+							url: "sys_scope.do?sys_id=" + chosen,
+							openInForm: true
+						});
+					});
+	
+					$("application_refresh").on("click", function (event) {
+						g_application_picker.fillApplications();
+						event.stopPropagation ? event.stopPropagation() : (event.cancelBubble = true);
+					});
+				});
+			</script>
+	var compElm = new GlideCompositeElement(current.getName(), '${jvar_table}');
+		var ed = compElm.getTargetED();
+		
+	15)   var dbu = new GlideDBUpdate('cmdb_ci');
+	       var dbq = new GlideDBQuery('cmdb_ci');
+	       dbq.addQuery('category', previous.category.toString());
+	       dbq.addQuery('sys_class_name', cat.name.toString());
+	       dbu.setQuery(dbq);
+	       dbu.setMultiple(true);
+	       dbu.setValue('category', cat.category.toString());
+	       dbu.setValue('subcategory', cat.subcategory.toString());
+	       dbu.execute();
+	       dbu.close();
+	       dbq.close();
+	
+	16)  GlideUpdateSet.get()
+	17)  GlideRunScriptJob.scheduleScript(script);
+	18) var mail = new GlideEmailOutbound();
+	     mail.setSubject(subject);
+	     mail.addRecipient(this.email);
+	     mail.setBody(body);
+	     mail.save();
+	19) Var nodegr = new GlideRecordSecure("sys_cb_node");
+	Nodegr.getRecordClassName();
+	.getListName()
+	20) GlideDomainSupport.getDomainTable()
+	21) GlideDomainSupport.getCurrentDomainValueOrGlobal();
+	22) gs.getCurrentScopeName()
+	23) GlidePluginManager.isRegistered('com.snc.service-mapping'));
+	24) new AttachmentSecurity().canWriteTarget(jelly.jvar_target_table, jelly.jvar_target_sys_id)
+	25) whatcxs_table_config > cxs_searcher_config > r >cxs_res_context_config > cxs_search_res_config 
+	cxs_search_resource : JAVA CLASSES (predefined)
+	26) gs.loadBatchScript("sys.scripts/" + event.parm1);
+
+
+	27) var r = new GlideRemoteGlideRecord("https://hi.service-now.com/", "ecc_queue"); 
+	r.initialize(); 
+	r.setValue("agent", "Service-now deployer"); 
+	r.setValue("name", "system.update.deny");
+	r.setValue("source", mynameonly);
+	r.setValue("queue", "input");
+	r.setValue("payload", "<update><url>" + mynameonly + "</url><war>" + event.parm1 + "</war></update>");
+	r.insert();
+	gs.print("Notification complete");
+
+	28) GlideController.putGlobal("context", context);
+	    var workflow = new Workflow().workflow.newWorkflowProxy();
+	    GlideController.putGlobal("workflow", workflow);
+
+	29)  var emailAction = new GlideEmailAction();
+	30) var titleConfig = new GlideSysTitle(this.trigger_table);
+	titleConfig.getTitle(titleGr);
+	
+	31) getFormattedTime() > pick system's time(client)
+	32) new GwtDate(new Date().getTime()).serializeInUserFormat() > pick system's time(client)
+	33) g_form.setValue('schedule_deadline', new GwtDate(161281910).serializeInUserFormat());
+	SOURCE : How to set client-side date fields from a unix epoch timestamp - Developer Community - Article - ServiceNow Community
+
+
+GlideDateTime, GlideDuration, GlideEvaluator, GlideFilter, GlideGuid, GlideLocale, GlidePluginManager, GlideRecord, GlideRecordSecure, GlideSchedule, GlideSecureRandomUtil, GlideSysAttachment, GlideTime, RP, XMLDocument2, email, g_processor, g_request, g_response, global, gs, sn_ws
+	
+
+
+
+
