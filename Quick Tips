@@ -7,3 +7,48 @@ Note : Note that inbound emails from inactive users will not be processed.
 
 3. How to hide watermark globally?
 Answer: Navigate to sys_properties table and set property "glide.email.watermark.visible" and set it to false.
+
+4.To change the default behavior, increase the value of the sn_flow_designer.max_actions system property.
+
+5. Want to pass data from widget to other application on a portal page like virtual agent?
+
+spContextManager API makes it easy.
+
+Method: addContext (Initializes a key and adds widget data as the value)
+
+addContext(String key, Object context)
+
+Example:
+function ($scope, spContextManager) {
+  spContextManager.addContext('agent-chat', {
+    'approval_count': 5    
+  });
+};
+
+if key is already defined use updateContextForKey method instead to update context.
+
+6. Want to scroll to a particular widget on a portal page on click of link or button?
+
+spUtil is your go to API.
+
+spUtil.scrollTo(String selector, Number time);
+
+String Selector = The selector to scroll to.
+Number time = The time, in milliseconds, taken to scroll to the specified selector.
+
+HTML :
+<button ng-click="goTo()" > Go to</button>
+
+Client Controller:
+
+$scope.goTo= function()
+{
+spUtil.scrollTo('.sp-scroll', 300);
+}
+
+7. Sometimes to make something work we need to clear the cache.
+To clear the cache you can use the following:
+In background script type gs.cacheFlush() and run it. But it is not recommended to do it in Prod instance as it will cause performance issues.
+But if you want to clear the cache in Prod, what you can do is pass some parameter to gs.cacheFlush() e.g. gs.cacheFlush('syscache_ui_policy') it will not have much impact on the performance as it will target only the specific area.
+
+8. 
