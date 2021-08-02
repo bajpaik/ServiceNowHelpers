@@ -1,0 +1,9 @@
+1.  How to enable automatic user creation from email?
+Answer : Set the property "glide.pop3readerjob.create_caller" to true in system properties, this will automatically create users for incoming emails from trusted domains.
+
+2. How to allow locked-out users to trigger inbound email actions?
+Answer: By adding the system property "glide.pop3.process_locked_out" to true.
+Note : Note that inbound emails from inactive users will not be processed.
+
+3. How to hide watermark globally?
+Answer: Navigate to sys_properties table and set property "glide.email.watermark.visible" and set it to false.
