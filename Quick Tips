@@ -51,4 +51,43 @@ To clear the cache you can use the following:
 In background script type gs.cacheFlush() and run it. But it is not recommended to do it in Prod instance as it will cause performance issues.
 But if you want to clear the cache in Prod, what you can do is pass some parameter to gs.cacheFlush() e.g. gs.cacheFlush('syscache_ui_policy') it will not have much impact on the performance as it will target only the specific area.
 
-8. 
+
+
+/////****************************************************************************************************************************************************************************////
+git pull --rebase
+git add .
+git commit -m "Message"
+git status
+git push
+
+https://github.com/Snow-Shell/servicenow-powershell
+https://github.com/ServiceNow/sncicd-gitlab-docker
+https://github.com/Sonnyducks/ServiceNow
+
+Tech Now Episode List : TechNow Episode List - Developer Community - Blog - ServiceNow Community
+UI Builder Modals : UI Builder - Modals (servicenow.com)
+Now JS Playlist : Video Series: Learn JavaScript on the Now Platform - Developer Community - Blog - ServiceNow Community
+Cross Scope Privileges : https://servicenowben.wordpress.com/2018/09/27/cross-scope-privileges/
+                                           http://sn.sptrac.com/?p=220
+Adding Custom check to ACC-M : https://community.servicenow.com/community?id=community_article&sys_id=3929b29d1bbc7410a59033f2cd4bcb9d
+What is a Tar.gz file : https://www.howtogeek.com/362203/what-is-a-tar.gz-file-and-how-do-i-open-it/
+Assessment Trigger:  (new sn_assessment_core.AssessmentCreation()).conditionTrigger(current, '2b18126d1b6f6c10430355352a4bcbd3'); 
+Sensu Checks Windows : https://github.com/sensu-plugins/sensu-plugins-windows/tree/master/bin
+Agent Workspace now-cli no longer ins use : Problem with running @now-cli develop command - Developer Community - Question - ServiceNow Community
+MID Server : https://support.servicenow.com/kb?id=kb_article_view&sysparm_article=KB0718589
+How ECC Queue works: https://support.servicenow.com/kb?id=kb_article_view&sysparm_article=KB0855595
+
+Video on Incident response playbook:  https://community.servicenow.com/community?id=community_article&sys_id=b214cc22db9478504819fb2439961953
+Incident Response Playbooks:  https://community.servicenow.com/community?id=community_blog&sys_id=66793ac1dba36410904fa9fb139619ac
+
+
+https://www.robvanderwoude.com/parameters.php
+
+AssessmentUtils().createAssessments returns 'noquestions' - Developer Community - Question - ServiceNow Community
+https://community.servicenow.com@quebc/community?id=community_question&sys_id=fa5607e1db1cdbc01dcaf3231f9619ca
+https://community.servicenow.com/community?id=community_question&sys_id=95ad036ddb9cdbc01dcaf3231f961961
+
+GlideDateTime, GlideDuration, GlideEvaluator, GlideFilter, GlideGuid, GlideLocale, GlidePluginManager, GlideRecord, GlideRecordSecure, GlideSchedule, GlideSecureRandomUtil, GlideSysAttachment, GlideTime, RP, XMLDocument2, email, g_processor, g_request, g_response, global, gs, sn_ws
+
+From <https://github.com/TestTypePublishing/TypePublishing/packages/77523> 
+mid_cert_check_policy TABLE
