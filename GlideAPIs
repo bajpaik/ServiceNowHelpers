@@ -132,6 +132,8 @@ NAV_PANE_CLICKED:				'glide:nav_window_clicked'
 	32) new GwtDate(new Date().getTime()).serializeInUserFormat() > pick system's time(client)
 	33) g_form.setValue('schedule_deadline', new GwtDate(161281910).serializeInUserFormat());
 	SOURCE : How to set client-side date fields from a unix epoch timestamp - Developer Community - Article - ServiceNow Community
+	
+	34) g_form.activateTab('new_itsmconnect') == false
 
 
 GlideDateTime, GlideDuration, GlideEvaluator, GlideFilter, GlideGuid, GlideLocale, GlidePluginManager, GlideRecord, GlideRecordSecure, GlideSchedule, GlideSecureRandomUtil, GlideSysAttachment, GlideTime, RP, XMLDocument2, email, g_processor, g_request, g_response, global, gs, sn_ws
