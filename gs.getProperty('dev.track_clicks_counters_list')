@@ -1,0 +1,27 @@
+var obj = new Object();
+var answer = [];
+var countersData = gs.getProperty('dev.track_clicks_counters_list');
+if(countersData && countersData.length > 0) {
+	var gr = new GlideRecord('sys_properties');
+	gr.addQuery('name', 'IN', countersData.toString());
+	gr.query();
+
+	while(gr.next()) {
+		propObj.name = gr.getValue('name');
+		propObj.value = parseInt(gr.getValue('value'));
+		obj.data.push(propObj);
+		propObj = {};
+	}
+}
+
+answer.push(obj);
+var SNJSON = JSON, writer;
+
+writer = GlideTransaction.get().getResponse().getWriter();
+gs.info(answer)
+if (typeof answer !== 'undefined') {
+writer.write(new SNJSON().encode(answer));
+}
+
+writer.flush();
+writer.close();
