@@ -1,0 +1,35 @@
+Service now is storing all kind of based on the configuration done in the host. 
+
+
+Check out point number 5 in this discussion:  https://community.servicenow.com/community?id=community_blog&sys_id=66793ac1dba36410904fa9fb139619ac
+Store_link: https://store.servicenow.com/sn_appstore_store.do#!/store/application/4d122763d8253d33908fe51d620c5b03/1.0.3?sl=sh
+Video on Incident response playbook:  https://community.servicenow.com/community?id=community_article&sys_id=b214cc22db9478504819fb2439961953
+Adding Live CI Data to Agent Workspace https://community.servicenow.com/community?id=community_blog&sys_id=66793ac1dba36410904fa9fb139619ac
+
+Adding a Custom Plugin to ACC-M: https://community.servicenow.com/community?id=community_article&sys_id=3929b29d1bbc7410a59033f2cd4bcb9d
+
+CI/CD Azure Extension: https://github.com/ServiceNow/servicenow-cicd-azure-extension/releases
+
+Error : 
+Check failed to run. Response code: 3
+error getting plugin for check: error verifying plugin with public signature: plugin verification failed: crypto/rsa: verification error
+From <https://community.servicenow.com/community?id=community_question&sys_id=f8e9a2f61b3cb010aefc11751a4bcbcc&view_source=searchResult> 
+
+Install OpenSSL (comes OOB with Git) : Navigate here > 
+C:\Program Files\Git\usr\bin\openssl.exe
+From <https://stackoverflow.com/questions/50625283/how-to-install-openssl-in-windows-10> 
+Else install it from here: https://www.openssl.org/
+Else you can open the Git Bash (shift pressed + right click in the folder -> Git Bash Here) and use openssl command right in the Bash
+
+Creating a SSL Certificate (.sig file) (perform below in git terminal)
+	1) req -nodes -x509 -sha256 -newkey rsa:2048 -keyout "$(whoami)s Sign Key.key" -out "$(whoami)s Sign Key.crt" -days 365
+
+	2) dgst -sha256 -sign "$(whoami)s Sign Key.key" -out sign.txt.sha256 1e-acc.tar.gz
+
+	3) dgst -sha256 -verify  <(openssl x509 -in "$(whoami)s Sign Key.key"  -pubkey -noout) -signature sign.txt.sha256 1e-acc.tar.gz
+
+	4) base64 -in sign.txt.sha256 -out sign.txt.sha256_encode64.sig
+
+
+
+https://support.servicenow.com/kb?id=kb_article_view&sysparm_article=KB0864202
