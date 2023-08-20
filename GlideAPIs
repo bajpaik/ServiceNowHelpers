@@ -136,6 +136,7 @@ NAV_PANE_CLICKED:				'glide:nav_window_clicked'
 	34) g_form.activateTab('new_itsmconnect') == false
 	35) Get members of a group: GlideUserGroup.getMembers(groupSysID)
         36) Get a user's groups: GlideUserGroup.getUsersGroups(userSysID)
+        37) gs.unloadRecordToXML(linkedRecord, true); //USED IN Business rule link "Create Metadata Link"
 
 
 GlideDateTime, GlideDuration, GlideEvaluator, GlideFilter, GlideGuid, GlideLocale, GlidePluginManager, GlideRecord, GlideRecordSecure, GlideSchedule, GlideSecureRandomUtil, GlideSysAttachment, GlideTime, RP, XMLDocument2, email, g_processor, g_request, g_response, global, gs, sn_ws
